@@ -1,0 +1,50 @@
+{
+  "name": "@evojs/stylelint-plugin",
+  "version": "0.1.0",
+  "description": "Plugin for Stylelint",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "prebuild": "rm -rf dist/",
+    "build": "tsc --build tsconfig.build.json",
+    "postbuild": "node tools/postbuild",
+    "prerelease": "npm run build",
+    "release": "npm publish --access public dist/"
+  },
+  "dependencies": {
+    "postcss-scss": "^4.0.9",
+    "stylelint-order": "^6.0.4",
+    "stylelint-scss": "^6.3.1"
+  },
+  "devDependencies": {
+    "stylelint": "^16.6.1",
+    "chalk": "^4.1.2",
+    "glob": "~10.4.1",
+    "typescript": "~5.4.5"
+  },
+  "peerDependencies": {
+    "stylelint": ">=16.0.0"
+  },
+  "peerDependenciesMeta": {
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "author": {
+    "name": "Shamil Sultanov",
+    "email": "shamil.amirovich@gmail.com"
+  },
+  "keywords": [
+    "evojs",
+    "stylelint",
+    "plugin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evotool/js-stylelint-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/evotool/js-stylelint-plugin/issues"
+  },
+  "homepage": "https://github.com/evotool/js-stylelint-plugin#readme"
+}
