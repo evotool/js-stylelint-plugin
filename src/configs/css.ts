@@ -4,99 +4,120 @@ const configuration = {
   files: ['*.css', '**/*.css'],
   plugins: ['stylelint-order'],
   rules: {
-    'at-rule-allowed-list': true,
-    'at-rule-disallowed-list': true,
-    'at-rule-property-required-list': true,
-    'color-hex-alpha': true,
-    'color-named': true,
+    'alpha-value-notation': 'number',
+    'at-rule-no-unknown': [true, { 'ignoreAtRules': ['include', 'mixin'] }],
+    'block-no-empty': null,
+    'declaration-block-no-redundant-longhand-properties': null,
+    'declaration-block-no-shorthand-property-overrides': null,
+    'font-family-no-missing-generic-family-keyword': null,
+    'font-weight-notation': 'numeric',
+    'function-no-unknown': null,
+    'function-url-quotes': null,
+    'no-descending-specificity': null,
+    'no-empty-source': null,
+    'no-invalid-position-at-import-rule': null,
+    'property-no-vendor-prefix': null,
+    'selector-class-pattern': null,
+    'selector-pseudo-class-no-unknown': null,
+    'selector-pseudo-element-no-unknown': null,
+    'selector-type-no-unknown': null,
+
+    'order/properties-alphabetical-order': true,
+
+    'at-rule-allowed-list': null,
+    'at-rule-disallowed-list': null,
+    'at-rule-property-required-list': null,
+    'color-hex-alpha': null,
+    'color-named': null,
+    'comment-pattern': null,
+    'comment-word-disallowed-list': null,
+    'declaration-property-max-values': null,
+    'declaration-property-unit-allowed-list': null,
+    'declaration-property-unit-disallowed-list': null,
+    'declaration-property-value-allowed-list': null,
+    'declaration-property-value-disallowed-list': null,
+    'function-allowed-list': null,
+    'function-disallowed-list': null,
+    'function-url-scheme-allowed-list': null,
+    'function-url-scheme-disallowed-list': null,
+    'max-nesting-depth': null,
+    'media-feature-name-allowed-list': null,
+    'media-feature-name-disallowed-list': null,
+    'media-feature-name-unit-allowed-list': null,
+    'media-feature-name-value-allowed-list': null,
+    'property-allowed-list': null,
+    'property-disallowed-list': null,
+    'rule-selector-property-disallowed-list': null,
+    'selector-attribute-name-disallowed-list': null,
+    'selector-attribute-operator-allowed-list': null,
+    'selector-attribute-operator-disallowed-list': null,
+    'selector-combinator-allowed-list': null,
+    'selector-combinator-disallowed-list': null,
+    'selector-disallowed-list': null,
+    'selector-max-attribute': null,
+    'selector-max-class': null,
+    'selector-max-combinators': null,
+    'selector-max-compound-selectors': null,
+    'selector-max-id': null,
+    'selector-max-pseudo-class': null,
+    'selector-max-specificity': null,
+    'selector-max-type': null,
+    'selector-max-universal': null,
+    'selector-nested-pattern': null,
+    'selector-pseudo-class-allowed-list': null,
+    'selector-pseudo-class-disallowed-list': null,
+    'selector-pseudo-element-allowed-list': null,
+    'selector-pseudo-element-disallowed-list': null,
+    'time-min-milliseconds': null,
+    'unit-allowed-list': null,
+    'unit-disallowed-list': null,
+
     'color-no-hex': true,
-    'comment-pattern': true,
-    'comment-word-disallowed-list': true,
     'declaration-no-important': true,
-    'declaration-property-max-values': true,
-    'declaration-property-unit-allowed-list': true,
-    'declaration-property-unit-disallowed-list': true,
-    'declaration-property-value-allowed-list': true,
-    'declaration-property-value-disallowed-list': true,
     'declaration-property-value-no-unknown': true,
-    'font-weight-notation': true,
-    'function-allowed-list': true,
-    'function-disallowed-list': true,
+    // 'font-weight-notation': true,
     'function-url-no-scheme-relative': true,
-    'function-url-scheme-allowed-list': true,
-    'function-url-scheme-disallowed-list': true,
-    'max-nesting-depth': true,
-    'media-feature-name-allowed-list': true,
-    'media-feature-name-disallowed-list': true,
-    'media-feature-name-unit-allowed-list': true,
-    'media-feature-name-value-allowed-list': true,
     'media-feature-name-value-no-unknown': true,
     'no-unknown-animations': true,
     'no-unknown-custom-media': true,
     'no-unknown-custom-properties': true,
-    'property-allowed-list': true,
-    'property-disallowed-list': true,
-    'rule-selector-property-disallowed-list': true,
-    'selector-attribute-name-disallowed-list': true,
-    'selector-attribute-operator-allowed-list': true,
-    'selector-attribute-operator-disallowed-list': true,
-    'selector-combinator-allowed-list': true,
-    'selector-combinator-disallowed-list': true,
-    'selector-disallowed-list': true,
-    'selector-max-attribute': true,
-    'selector-max-class': true,
-    'selector-max-combinators': true,
-    'selector-max-compound-selectors': true,
-    'selector-max-id': true,
-    'selector-max-pseudo-class': true,
-    'selector-max-specificity': true,
-    'selector-max-type': true,
-    'selector-max-universal': true,
-    'selector-nested-pattern': true,
     'selector-no-qualifying-type': true,
-    'selector-pseudo-class-allowed-list': true,
-    'selector-pseudo-class-disallowed-list': true,
-    'selector-pseudo-element-allowed-list': true,
-    'selector-pseudo-element-disallowed-list': true,
-    'time-min-milliseconds': true,
-    'unit-allowed-list': true,
-    'unit-disallowed-list': true,
 
     'annotation-no-unknown': true, // recommended
-    'at-rule-no-unknown': true, // recommended
-    'block-no-empty': true, // recommended
+    // 'at-rule-no-unknown': true, // recommended
+    // 'block-no-empty': true, // recommended
     'color-no-invalid-hex': true, // recommended
     'comment-no-empty': true, // recommended
     'custom-property-no-missing-var-function': true, // recommended
     'declaration-block-no-duplicate-custom-properties': true, // recommended
     'declaration-block-no-duplicate-properties': [true, { ignore: ['consecutive-duplicates-with-different-syntaxes'] }], // recommended
-    'declaration-block-no-shorthand-property-overrides': true, // recommended
+    // 'declaration-block-no-shorthand-property-overrides': true, // recommended
     'font-family-no-duplicate-names': true, // recommended
-    'font-family-no-missing-generic-family-keyword': true, // recommended
+    // 'font-family-no-missing-generic-family-keyword': true, // recommended
     'function-calc-no-unspaced-operator': true, // recommended
     'function-linear-gradient-no-nonstandard-direction': true, // recommended
-    'function-no-unknown': true, // recommended
+    // 'function-no-unknown': true, // recommended
     'keyframe-block-no-duplicate-selectors': true, // recommended
     'keyframe-declaration-no-important': true, // recommended
     'media-feature-name-no-unknown': true, // recommended
     'media-query-no-invalid': true, // recommended
     'named-grid-areas-no-invalid': true, // recommended
-    'no-descending-specificity': true, // recommended
+    // 'no-descending-specificity': true, // recommended
     'no-duplicate-at-import-rules': true, // recommended
     'no-duplicate-selectors': true, // recommended
-    'no-empty-source': true, // recommended
+    // 'no-empty-source': true, // recommended
     'no-invalid-double-slash-comments': true, // recommended
-    'no-invalid-position-at-import-rule': true, // recommended
+    // 'no-invalid-position-at-import-rule': true, // recommended
     'no-irregular-whitespace': true, // recommended
     'property-no-unknown': true, // recommended
     'selector-anb-no-unmatchable': true, // recommended
-    'selector-pseudo-class-no-unknown': true, // recommended
-    'selector-pseudo-element-no-unknown': true, // recommended
-    'selector-type-no-unknown': [true, { ignore: ['custom-elements'] }], // recommended
+    // 'selector-pseudo-class-no-unknown': true, // recommended
+    // 'selector-pseudo-element-no-unknown': true, // recommended
+    // 'selector-type-no-unknown': [true, { ignore: ['custom-elements'] }], // recommended
     'string-no-newline': true, // recommended
     'unit-no-unknown': true, // recommended
 
-    'alpha-value-notation': ['percentage', { exceptProperties: ['opacity', 'fill-opacity', 'flood-opacity', 'stop-opacity', 'stroke-opacity'] }], // standard
+    // 'alpha-value-notation': ['percentage', { exceptProperties: ['opacity', 'fill-opacity', 'flood-opacity', 'stop-opacity', 'stroke-opacity'] }], // standard
     'at-rule-empty-line-before': ['always', { except: ['blockless-after-same-name-blockless', 'first-nested'], ignore: ['after-comment'] }], // standard
     'at-rule-no-vendor-prefix': true, // standard
     'color-function-notation': 'modern', // standard
@@ -106,12 +127,12 @@ const configuration = {
     'custom-media-pattern': ['^([a-z][a-z0-9]*)(-[a-z0-9]+)*$', { message: (name: string) => `Expected custom media query name "${name}" to be kebab-case` }], // standard
     'custom-property-empty-line-before': ['always', { except: ['after-custom-property', 'first-nested'], ignore: ['after-comment', 'inside-single-line-block'] }], // standard
     'custom-property-pattern': ['^([a-z][a-z0-9]*)(-[a-z0-9]+)*$', { message: (name: string) => `Expected custom property name "${name}" to be kebab-case` }], // standard
-    'declaration-block-no-redundant-longhand-properties': true, // standard
+    // 'declaration-block-no-redundant-longhand-properties': true, // standard
     'declaration-block-single-line-max-declarations': 1, // standard
     'declaration-empty-line-before': ['always', { except: ['after-declaration', 'first-nested'], ignore: ['after-comment', 'inside-single-line-block'] }], // standard
     'font-family-name-quotes': 'always-where-recommended', // standard
     'function-name-case': 'lower', // standard
-    'function-url-quotes': 'always', // standard
+    // 'function-url-quotes': 'always', // standard
     'hue-degree-notation': 'angle', // standard
     'import-notation': 'url', // standard
     'keyframe-selector-notation': 'percentage-unless-within-keyword-only-block', // standard
@@ -121,10 +142,10 @@ const configuration = {
     'media-feature-name-no-vendor-prefix': true, // standard
     'media-feature-range-notation': 'context', // standard
     'number-max-precision': 4, // standard
-    'property-no-vendor-prefix': true, // standard
+    // 'property-no-vendor-prefix': true, // standard
     'rule-empty-line-before': ['always-multi-line', { except: ['first-nested'], ignore: ['after-comment'] }], // standard
     'selector-attribute-quotes': 'always', // standard
-    'selector-class-pattern': ['^([a-z][a-z0-9]*)(-[a-z0-9]+)*$', { message: (selector: string) => `Expected class selector "${selector}" to be kebab-case` }], // standard
+    // 'selector-class-pattern': ['^([a-z][a-z0-9]*)(-[a-z0-9]+)*$', { message: (selector: string) => `Expected class selector "${selector}" to be kebab-case` }], // standard
     'selector-id-pattern': ['^([a-z][a-z0-9]*)(-[a-z0-9]+)*$', { message: (selector: string) => `Expected id selector "${selector}" to be kebab-case` }], // standard
     'selector-no-vendor-prefix': true, // standard
     'selector-not-notation': 'complex', // standard
