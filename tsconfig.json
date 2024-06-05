@@ -3,8 +3,8 @@
     "baseUrl": "./",
     "lib": ["esnext"],
     "moduleResolution": "node",
-    "removeComments": true,
     "outDir": "dist/",
+    "removeComments": true,
     "strict": true,
     "target": "es5"
   },
