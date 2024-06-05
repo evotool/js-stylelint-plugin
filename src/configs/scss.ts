@@ -11,8 +11,11 @@ const configuration = {
     'alpha-value-notation': 'number',
     'at-rule-no-unknown': [true, { 'ignoreAtRules': ['include', 'mixin'] }],
     'block-no-empty': null,
+    'color-no-hex': null,
     'declaration-block-no-redundant-longhand-properties': null,
     'declaration-block-no-shorthand-property-overrides': null,
+    'declaration-no-important': null, // ?
+    'declaration-property-value-no-unknown': null, // ?
     'font-family-no-missing-generic-family-keyword': null,
     'font-weight-notation': 'numeric',
     'function-no-unknown': null,
@@ -20,14 +23,20 @@ const configuration = {
     'no-descending-specificity': null,
     'no-empty-source': null,
     'no-invalid-position-at-import-rule': null,
+    'no-unknown-custom-properties': null, // ?
     'property-no-vendor-prefix': null,
     'selector-class-pattern': null,
+    'selector-no-qualifying-type': null, // ?
     'selector-pseudo-class-no-unknown': null,
     'selector-pseudo-element-no-unknown': null,
     'selector-type-no-unknown': null,
 
     'order/properties-alphabetical-order': true,
 
+    'scss/block-no-redundant-nesting': null, // ?
+    'scss/dollar-variable-default': null, // ?
+    'scss/function-no-unknown': null,
+    'scss/no-dollar-variables': null,
     'scss/no-global-function-names': null,
 
     'at-rule-allowed-list': null,
@@ -78,16 +87,16 @@ const configuration = {
     'unit-allowed-list': null,
     'unit-disallowed-list': null,
 
-    'color-no-hex': true,
-    'declaration-no-important': true,
-    'declaration-property-value-no-unknown': true,
+    // 'color-no-hex': true,
+    // 'declaration-no-important': true,
+    // 'declaration-property-value-no-unknown': true,
     // 'font-weight-notation': true,
     'function-url-no-scheme-relative': true,
     'media-feature-name-value-no-unknown': true,
     'no-unknown-animations': true,
     'no-unknown-custom-media': true,
-    'no-unknown-custom-properties': true,
-    'selector-no-qualifying-type': true,
+    // 'no-unknown-custom-properties': true,
+    // 'selector-no-qualifying-type': true,
 
     // 'annotation-no-unknown': true, // recommended
     // 'at-rule-no-unknown': true, // recommended
@@ -181,16 +190,16 @@ const configuration = {
     'scss/at-root-no-redundant': true,
     'scss/at-use-no-redundant-alias': true,
     'scss/at-use-no-unnamespaced': true,
-    'scss/block-no-redundant-nesting': true,
+    // 'scss/block-no-redundant-nesting': true,
     'scss/comment-no-loud': true,
     'scss/dimension-no-non-numeric-values': true,
-    'scss/dollar-variable-default': true,
+    // 'scss/dollar-variable-default': true,
     'scss/dollar-variable-first-in-block': true,
     'scss/dollar-variable-no-namespaced-assignment': true,
     'scss/function-calculation-no-interpolation': true,
     'scss/function-color-relative': true,
-    'scss/function-no-unknown': true,
-    'scss/no-dollar-variables': true,
+    // 'scss/function-no-unknown': true,
+    // 'scss/no-dollar-variables': true,
     'scss/no-duplicate-dollar-variables': true,
     'scss/no-unused-private-members': true,
     'scss/partial-no-import': true,

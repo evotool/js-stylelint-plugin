@@ -7,8 +7,11 @@ const configuration = {
     'alpha-value-notation': 'number',
     'at-rule-no-unknown': [true, { 'ignoreAtRules': ['include', 'mixin'] }],
     'block-no-empty': null,
+    'color-no-hex': null,
     'declaration-block-no-redundant-longhand-properties': null,
     'declaration-block-no-shorthand-property-overrides': null,
+    'declaration-no-important': null, // ?
+    'declaration-property-value-no-unknown': null, // ?
     'font-family-no-missing-generic-family-keyword': null,
     'font-weight-notation': 'numeric',
     'function-no-unknown': null,
@@ -16,8 +19,10 @@ const configuration = {
     'no-descending-specificity': null,
     'no-empty-source': null,
     'no-invalid-position-at-import-rule': null,
+    'no-unknown-custom-properties': null, // ?
     'property-no-vendor-prefix': null,
     'selector-class-pattern': null,
+    'selector-no-qualifying-type': null, // ?
     'selector-pseudo-class-no-unknown': null,
     'selector-pseudo-element-no-unknown': null,
     'selector-type-no-unknown': null,
@@ -72,16 +77,16 @@ const configuration = {
     'unit-allowed-list': null,
     'unit-disallowed-list': null,
 
-    'color-no-hex': true,
-    'declaration-no-important': true,
-    'declaration-property-value-no-unknown': true,
+    // 'color-no-hex': true,
+    // 'declaration-no-important': true,
+    // 'declaration-property-value-no-unknown': true,
     // 'font-weight-notation': true,
     'function-url-no-scheme-relative': true,
     'media-feature-name-value-no-unknown': true,
     'no-unknown-animations': true,
     'no-unknown-custom-media': true,
-    'no-unknown-custom-properties': true,
-    'selector-no-qualifying-type': true,
+    // 'no-unknown-custom-properties': true,
+    // 'selector-no-qualifying-type': true,
 
     'annotation-no-unknown': true, // recommended
     // 'at-rule-no-unknown': true, // recommended
