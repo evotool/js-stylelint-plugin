@@ -209,7 +209,7 @@ const configuration = {
     // 'scss/partial-no-import': true,
     'scss/property-no-unknown': true,
     'scss/selector-no-redundant-nesting-selector': true,
-    'scss/selector-no-union-class-name': true,
+    'scss/selector-no-union-class-name': null, // ?
 
     'annotation-no-unknown': null, // recommended-scss
     // 'at-rule-no-unknown': null, // recommended-scss
